@@ -38,6 +38,7 @@ header {
   color: #fff;
   -webkit-transition: height .5s ease;
   transition: height .5s ease;
+  display: none;
 }
 
 header nav {
@@ -282,26 +283,57 @@ section.section--careers .description {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: lavender;
 }
 
+.our-team .title {
+  color: red;
+  margin: 20px 0;
+}
+
+.our-team .sub-title {
+  margin: 0 0 50px 0;
+  font-weight: 200;
+}
+
 .our-team .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+  padding: 1em 2em;
+}
+
+.our-team .card-container .card {
+  width: 25%;
+  height: 500px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.our-team .card-container .card .card__img {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.our-team .card-container .card .card__img img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media screen and (max-width: 1000px) {
