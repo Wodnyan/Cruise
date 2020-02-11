@@ -243,6 +243,53 @@ section.section--careers {
     align-items: center;
     justify-content: center;
 
+    .title {
+        color: red;
+        margin: 20px 0;
+        font-size: 1em;
+    }
+
+    .sub-title {
+        margin-bottom: 50px;
+        font-size: 2.2em;
+    }
+
+    .our-team__footer {
+        margin-top: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.185);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 80%;
+
+        .team-info {
+            text-decoration: none;
+            color: red;
+            font-size: 1.2em;
+            font-weight: 700;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 3px;
+                right: 0;
+                background-color: red;
+                position: absolute;
+                display: block;
+                transition: width .5s ease;
+            }
+
+            &:hover {
+                &::after {
+                    width: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
     .card-container {
         width: 100%;
         display: flex;
@@ -271,6 +318,7 @@ section.section--careers {
                 }
             }
 
+            //Make arrow 
             .card__info {
                 grid-row: 2/3;
                 position: relative;
@@ -285,6 +333,7 @@ section.section--careers {
                 .card__title {
                     margin: 10px 0;
                     font-weight: 500;
+                    position: relative;
                 }
 
                 .author {
