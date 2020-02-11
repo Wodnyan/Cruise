@@ -287,6 +287,58 @@ section.section--careers .description {
           justify-content: center;
 }
 
+.our-team .title {
+  color: red;
+  margin: 20px 0;
+  font-size: 1em;
+}
+
+.our-team .sub-title {
+  margin-bottom: 50px;
+  font-size: 2.2em;
+}
+
+.our-team .our-team__footer {
+  margin-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.185);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 80%;
+}
+
+.our-team .our-team__footer .team-info {
+  text-decoration: none;
+  color: red;
+  font-size: 1.2em;
+  font-weight: 700;
+  position: relative;
+}
+
+.our-team .our-team__footer .team-info::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  right: 0;
+  background-color: red;
+  position: absolute;
+  display: block;
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+.our-team .our-team__footer .team-info:hover::after {
+  width: 0;
+  left: 0;
+}
+
 .our-team .card-container {
   width: 100%;
   display: -webkit-box;
@@ -348,6 +400,7 @@ section.section--careers .description {
 .our-team .card-container .card .card__info .card__title {
   margin: 10px 0;
   font-weight: 500;
+  position: relative;
 }
 
 .our-team .card-container .card .card__info .author {
