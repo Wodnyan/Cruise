@@ -38,7 +38,6 @@ header {
   color: #fff;
   -webkit-transition: height .5s ease;
   transition: height .5s ease;
-  display: none;
 }
 
 header nav {
@@ -340,18 +339,21 @@ section.section--careers .description {
 }
 
 .our-team .card-container {
-  width: 100%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .our-team .card-container .card {
   height: 550px;
-  width: 350px;
+  width: 300px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1.5fr 1.5fr;
@@ -388,7 +390,7 @@ section.section--careers .description {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   position: relative;
-  padding: 1.2em;
+  padding: 0.5em;
 }
 
 .our-team .card-container .card .card__info .time {
@@ -401,6 +403,7 @@ section.section--careers .description {
   margin: 10px 0;
   font-weight: 500;
   position: relative;
+  font-size: 1.8em;
 }
 
 .our-team .card-container .card .card__info .author {
@@ -433,6 +436,9 @@ section.section--careers .description {
 }
 
 @media screen and (max-width: 1000px) {
+  body {
+    font-size: 12px;
+  }
   main .hero h1 {
     font-size: 2em;
   }
@@ -534,7 +540,7 @@ section.section--careers .description {
   section .description {
     padding: 30px;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
   section .description .btn {
     width: 100%;
@@ -547,6 +553,24 @@ section.section--careers .description {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+  }
+  .our-team .card-container {
+    padding: 0px 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .our-team .card-container .card {
+    width: 100%;
+    height: 400px;
+  }
+  .our-team .card-container li:nth-child(2) {
+    margin: 50px 0;
+  }
+  .our-team .our-team__footer {
+    height: 100px;
   }
 }
 
