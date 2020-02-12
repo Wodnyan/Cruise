@@ -366,6 +366,22 @@ section.section--careers {
     }
 }
 
+section.street-smart {
+    padding: 4em;
+    margin: 0;
+    background-color: #233741;
+    color: white;
+    font-size: 1.5em;
+
+    .text {
+        text-align: center;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
 @media screen and(max-width: 1000px) {
     body {
         font-size: 12px;

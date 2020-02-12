@@ -435,6 +435,22 @@ section.section--careers .description {
           transform: scale(1.3);
 }
 
+section.street-smart {
+  padding: 4em;
+  margin: 0;
+  background-color: #233741;
+  color: white;
+  font-size: 1.5em;
+}
+
+section.street-smart .text {
+  text-align: center;
+}
+
+section.street-smart .text h1 {
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 1000px) {
   body {
     font-size: 12px;
