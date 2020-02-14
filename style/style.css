@@ -217,7 +217,7 @@ section .description {
 }
 
 section .description .description__title {
-  color: red;
+  color: #ff4d37;
 }
 
 section .description h2 {
@@ -237,7 +237,7 @@ section .description .btn {
   border: 2px solid rgba(196, 196, 196, 0.7);
   border-radius: 50px;
   background: transparent;
-  color: red;
+  color: #ff4d37;
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
@@ -246,7 +246,7 @@ section .description .btn {
 }
 
 section .description .btn:hover {
-  border-color: red;
+  border-color: #ff4d37;
 }
 
 section .img--container {
@@ -287,7 +287,7 @@ section.section--careers .description {
 }
 
 .our-team .title {
-  color: red;
+  color: #ff4d37;
   margin: 20px 0;
   font-size: 1em;
 }
@@ -315,7 +315,7 @@ section.section--careers .description {
 
 .our-team .our-team__footer .team-info {
   text-decoration: none;
-  color: red;
+  color: #ff4d37;
   font-size: 1.2em;
   font-weight: 700;
   position: relative;
@@ -326,7 +326,7 @@ section.section--careers .description {
   width: 100%;
   height: 3px;
   right: 0;
-  background-color: red;
+  background-color: #ff4d37;
   position: absolute;
   display: block;
   -webkit-transition: width .5s ease;
@@ -339,7 +339,7 @@ section.section--careers .description {
 }
 
 .our-team .card-container {
-  width: 75%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,6 +352,9 @@ section.section--careers .description {
 }
 
 .our-team .card-container .card {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
   height: 550px;
   width: 300px;
   display: -ms-grid;
@@ -665,7 +668,8 @@ header span.burger.burger--active {
   color: #fff;
 }
 
-section .description.js-toggle-fade {
+section .description.js-toggle-fade,
+.our-team .card-container .card.js-toggle-fade {
   -webkit-transform: translateY(0) !important;
           transform: translateY(0) !important;
   opacity: 1 !important;
