@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Lato";
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: .8em 2em;
+  -ms-grid-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+}
+
+header nav {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  width: 100%;
+}
+
+header nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+header nav .nav-list .nav-list__item {
+  padding: 1em;
+}
+
+header nav .nav-list .nav-list__item a {
+  text-decoration: none;
+  color: #000;
+}
+
+header .burger {
+  display: none;
+}
+
+header .apply-button {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+header .apply-button button {
+  padding: 1em 4em;
+  outline: none;
+  background: transparent;
+  border: 1.5px solid black;
+  border-radius: 50px;
+  -webkit-transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+header .apply-button button:hover {
+  background-color: black;
+  color: white;
+}
+
+header .apply-button button:hover .header {
+  -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+}
+
+main {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
