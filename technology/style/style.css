@@ -10,6 +10,8 @@
 :root {
   --nav-border-color: #fff;
   --nav-color: #fff;
+  --red-color: #ff4d37;
+  --blue-color-text: #2f3d45;
 }
 
 body,
@@ -136,29 +138,57 @@ main .hero__text h1 {
 }
 
 main .play-button {
-  width: 3em;
-  height: 3em;
-  padding: 2em;
-  margin: 1.5em 0;
-  background-color: #ff4d37;
+  margin-top: 1em;
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
   border-radius: 50%;
+  background: var(--red-color);
   cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  overflow: hidden;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
+main .play-button .__button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+main .play-button .__button i {
+  position: absolute;
+  display: inline-block;
+}
+
+main .play-button .__button i.hover-icon {
+  right: 200%;
+}
+
 main .play-button:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 main .play-button:hover .__button {
-  -webkit-transform: translateX(15%);
-          transform: translateX(15%);
+  -webkit-transform: translateX(162%);
+          transform: translateX(162%);
 }
 
 main::after {
@@ -174,7 +204,59 @@ main::after {
   z-index: -25;
 }
 
-section {
-  height: 100%;
+section.text-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+section.text-header .title {
+  font-size: 1em;
+  font-weight: 800;
+  color: var(--red-color);
+}
+
+section.text-header .sub-title {
+  margin: .8em 0;
+  padding: 0 1em;
+  font-size: 2.5em;
+  font-weight: 200;
+}
+
+section.text-header .sub-title,
+section.text-header p {
+  color: var(--blue-color-text);
+}
+
+.carousel ul {
+  list-style: none;
+}
+
+.carousel ul li a {
+  text-decoration: none;
+  color: var(--blue-color-text);
+}
+
+.carousel .carousel__button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0 10em;
 }
 /*# sourceMappingURL=style.css.map */

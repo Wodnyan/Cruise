@@ -9,6 +9,8 @@
 :root {
     --nav-border-color: #fff;
     --nav-color: #fff;
+    --red-color: #ff4d37;
+    --blue-color-text: #2f3d45;
 }
 
 body,
@@ -114,22 +116,42 @@ main {
     }
 
     .play-button {
-        width: 3em;
-        height: 3em;
-        padding: 2em;
-        margin: 1.5em 0;
-        background-color: #ff4d37;
+        margin-top: 1em;
+        display: block;
+        width: 3.5em;
+        height: 3.5em;
         border-radius: 50%;
+        background: var(--red-color);
         cursor: pointer;
-        transform: scale(1);
+        overflow: hidden;
         transition: transform .5s ease;
-        // overflow-x: hidden;
+
+        .__button {
+            // background: #fff;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: transform .5s ease;
+
+            i {
+                position: absolute;
+                display: inline-block;
+            }
+
+            i.hover-icon {
+                right: 200%;
+            }
+        }
 
         &:hover {
-            transform: scale(1.3);
+            transform: scale(1.2);
 
             .__button {
-                transform: translateX(15%);
+                transform: translateX(162%);
             }
         }
     }
@@ -148,6 +170,50 @@ main {
     }
 }
 
-section {
-    height: 100%;
+
+section.text-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+
+    .title {
+        font-size: 1em;
+        font-weight: 800;
+        color: var(--red-color);
+    }
+
+    .sub-title {
+        margin: .8em 0;
+        padding: 0 1em;
+        font-size: 2.5em;
+        font-weight: 200;
+    }
+
+    .sub-title,
+    p {
+        color: var(--blue-color-text);
+    }
+}
+
+.carousel {
+    ul {
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: var(--blue-color-text);
+            }
+        }
+    }
+
+    .carousel__button-container {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 10em;
+    }
 }
