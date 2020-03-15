@@ -88,6 +88,10 @@ header {
 
 }
 
+.logo {
+    display: none;
+}
+
 header.isIntersecting {
     background-color: #fff;
     padding: .5em 2em;
