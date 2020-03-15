@@ -12,6 +12,7 @@
   --nav-color: #fff;
   --red-color: #ff4d37;
   --blue-color-text: #2f3d45;
+  --off-white: rgba(0, 0, 0, .15);
 }
 
 body,
@@ -30,7 +31,7 @@ header {
   right: 0;
   display: -ms-grid;
   display: grid;
-  padding: .8em 2em;
+  padding: 1em 2em;
   -ms-grid-columns: 1fr auto 1fr;
       grid-template-columns: 1fr auto 1fr;
   -webkit-box-align: center;
@@ -39,6 +40,8 @@ header {
   border-bottom: 1px solid var(--nav-border-color);
   color: var(--nav-color);
   z-index: 200;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 header nav {
@@ -73,25 +76,49 @@ header .apply-button {
 }
 
 header .apply-button button {
-  padding: 1em 4em;
+  padding: .8em 4em;
   outline: none;
   background: transparent;
-  border: 1.5px solid var(--nav-border-color);
+  border: 2px solid var(--nav-border-color);
   border-radius: 50px;
   -webkit-transition: background-color .2s ease, color .2s ease;
   transition: background-color .2s ease, color .2s ease;
   color: var(--nav-color);
+  font-size: 1em;
   cursor: pointer;
 }
 
 header .apply-button button:hover {
-  background-color: black;
-  color: white;
+  background-color: #fff;
+  color: #000;
 }
 
 header .apply-button button:hover .header {
   -webkit-transform: scaleX(2);
           transform: scaleX(2);
+}
+
+header.isIntersecting {
+  background-color: #fff;
+  padding: .5em 2em;
+  border-color: var(--off-white);
+}
+
+header.isIntersecting .logo {
+  color: var(--red-color);
+}
+
+header.isIntersecting .nav-list .nav-list__item a {
+  color: var(--blue-color-text);
+}
+
+header.isIntersecting .apply-button button {
+  border-color: var(--off-white);
+  color: #000;
+}
+
+header.isIntersecting .apply-button button:hover {
+  border-color: var(--blue-color-text);
 }
 
 main {
@@ -191,6 +218,11 @@ main .play-button:hover .__button {
           transform: translateX(162%);
 }
 
+main .__button.__button--paused {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
 main::after {
   content: '';
   display: block;
@@ -258,5 +290,9 @@ section.text-header p {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 0 10em;
+}
+
+.foo {
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

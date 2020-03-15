@@ -11,6 +11,7 @@
     --nav-color: #fff;
     --red-color: #ff4d37;
     --blue-color-text: #2f3d45;
+    --off-white: rgba(0, 0, 0, .15);
 }
 
 body,
@@ -28,12 +29,13 @@ header {
     left: 0;
     right: 0;
     display: grid;
-    padding: .8em 2em;
+    padding: 1em 2em;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     border-bottom: 1px solid var(--nav-border-color);
     color: var(--nav-color);
     z-index: 200;
+    transition: all .2s ease;
 
     nav {
         justify-self: start;
@@ -63,23 +65,48 @@ header {
         justify-self: end;
 
         button {
-            padding: 1em 4em;
+            padding: .8em 4em;
             outline: none;
             background: transparent;
-            border: 1.5px solid var(--nav-border-color);
+            border: 2px solid var(--nav-border-color);
             border-radius: 50px;
             transition: background-color .2s ease, color .2s ease;
             color: var(--nav-color);
+            font-size: 1em;
             cursor: pointer;
 
             &:hover {
-                background-color: black;
-                color: white;
+                background-color: #fff;
+                color: #000;
 
                 .header {
                     transform: scaleX(2);
                 }
             }
+        }
+    }
+
+}
+
+header.isIntersecting {
+    background-color: #fff;
+    padding: .5em 2em;
+    border-color: var(--off-white);
+
+    .logo {
+        color: var(--red-color);
+    }
+
+    .nav-list .nav-list__item a {
+        color: var(--blue-color-text);
+    }
+
+    .apply-button button {
+        border-color: var(--off-white);
+        color: #000;
+
+        &:hover {
+            border-color: var(--blue-color-text);
         }
     }
 }
@@ -156,6 +183,11 @@ main {
         }
     }
 
+    .__button.__button--paused {
+        transition-duration: 0s;
+    }
+
+
     &::after {
         content: '';
         display: block;
@@ -216,4 +248,8 @@ section.text-header {
         justify-content: space-evenly;
         padding: 0 10em;
     }
+}
+
+.foo {
+    height: 100%;
 }
