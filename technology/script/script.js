@@ -8,8 +8,9 @@ const carouselContainer = document.querySelector('.carousel');
 const carouselBtnContainer = document.querySelector('.carousel-button-container');
 const carouselItem = carouselContainer.querySelectorAll('.carousel__item');
 const carouselBtns = Array.from(document.querySelectorAll('.carousel__button'));
-const carouselItemWidth = carouselItem[0].getBoundingClientRect().width + 50; //Because of the margin
-carouselContainer.style.transform = `translateX(-${carouselItemWidth}px)`;
+const carouselItemWidth = (carouselItem[0].getBoundingClientRect().width);
+console.log(carouselItemWidth);
+
 //Bubble
 const bubble = document.querySelector('.bubble');
 
@@ -23,14 +24,14 @@ handleBtn(carouselBtns[0])
 //carousel cvent listener
 carouselBtnContainer.addEventListener('click', (e) => {
     const target = e.target.classList.contains('carousel__button');
-    if (!target) return;
     const targetIndex = carouselBtns.indexOf(e.target);
     const prevBtn = carouselBtnContainer.querySelector('.is-active');
     const currentBtn = carouselBtns[targetIndex];
+    const amountToMove = carouselItemWidth * targetIndex;
+    if (!target) return;
     prevBtn.classList.remove('is-active');
     currentBtn.classList.add('is-active');
     carouselBtns[targetIndex].classList.add('isActive');
-    const amountToMove = carouselItemWidth * targetIndex;
     handleBtn(carouselBtns[targetIndex]);
     carouselContainer.style.transform = `translateX(-${amountToMove}px)`;
 
